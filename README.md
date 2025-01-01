@@ -1,4 +1,4 @@
-# Task Organizer
+# Morning Routine
 
 A simple and elegant task management application built with vanilla JavaScript, HTML, and CSS. Organize your tasks into different categories and manage them with a clean, modern interface.
 
