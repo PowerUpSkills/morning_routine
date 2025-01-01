@@ -1,0 +1,215 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1d1d1f;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #1d1d1f;
+}
+
+/* Default Tasks Section */
+.default-tasks-section {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.default-tasks-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.default-tasks-list {
+    padding: 0.5rem 1rem;
+}
+
+.default-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f5f5f7;
+}
+
+.default-task:last-child {
+    border-bottom: none;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    color: #0066ff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.add-btn:hover {
+    background-color: #f5f5f7;
+}
+
+/* Add Task Section */
+.add-task-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #0066ff;
+}
+
+.add-task-btn {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-task-btn:hover {
+    background-color: #0052cc;
+}
+
+/* Task Lists */
+.task-list {
+    min-height: 100px;
+    border: 2px dashed #e1e1e1;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.task-placeholder {
+    color: #86868b;
+    text-align: center;
+    padding: 1rem;
+}
+
+.task-item {
+    background: white;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff3b30;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.delete-btn:hover {
+    background-color: #fff2f2;
+}
+
+/* Modals */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-buttons {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.category-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.5rem;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-btn:hover {
+    background-color: #f5f5f7;
+    border-color: #0066ff;
+}
+
+/* Drag and Drop Styles */
+.task-list.drag-over {
+    border-color: #0066ff;
+    background-color: #f0f7ff;
+}

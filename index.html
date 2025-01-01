@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="max-w-6xl mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4 text-gray-800">Task Organizer</h1>
+        
+        <!-- Default Items Section -->
+        <div class="mb-6 bg-white rounded-lg border border-gray-200 overflow-hidden">
+            <button id="defaultsToggle" class="w-full px-4 py-2 text-left flex items-center justify-between hover:bg-gray-50">
+                <span>Default Tasks</span>
+                <span class="toggle-icon">▼</span>
+            </button>
+            <div id="defaultTasksList" class="px-4 py-2 border-t border-gray-200">
+                <!-- Default tasks will be inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Add Task Section -->
+        <div class="mb-6 flex gap-2">
+            <input type="text" id="taskInput" class="flex-grow px-3 py-2 border rounded-lg" placeholder="Enter your task...">
+            <button id="addTaskBtn" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Add Task</button>
+        </div>
+
+        <!-- Task Lists -->
+        <div class="grid gap-6">
+            <div class="task-section">
+                <h2 class="text-lg font-semibold mb-2">Morning Routine</h2>
+                <div id="morningTasks" class="task-list min-h-[100px] border-2 border-dashed border-gray-300 rounded-lg p-4">
+                    <div class="task-placeholder text-gray-400">Drag tasks here</div>
+                </div>
+            </div>
+
+            <div class="task-section">
+                <h2 class="text-lg font-semibold mb-2">Job Tasks</h2>
+                <div id="jobTasks" class="task-list min-h-[100px] border-2 border-dashed border-gray-300 rounded-lg p-4">
+                    <div class="task-placeholder text-gray-400">Drag tasks here</div>
+                </div>
+            </div>
+
+            <div class="task-section">
+                <h2 class="text-lg font-semibold mb-2">Reminders</h2>
+                <div id="reminderTasks" class="task-list min-h-[100px] border-2 border-dashed border-gray-300 rounded-lg p-4">
+                    <div class="task-placeholder text-gray-400">Drag tasks here</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Selection Modal -->
+        <div id="categoryModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 w-[90%] max-w-md">
+                <h2 class="text-xl font-bold mb-4">Select Category</h2>
+                <div class="grid gap-3">
+                    <button data-category="morning" class="category-btn w-full px-4 py-2 border rounded-lg hover:bg-gray-50">Morning Routine</button>
+                    <button data-category="job" class="category-btn w-full px-4 py-2 border rounded-lg hover:bg-gray-50">Job Tasks</button>
+                    <button data-category="reminder" class="category-btn w-full px-4 py-2 border rounded-lg hover:bg-gray-50">Reminders</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Put Back Modal -->
+        <div id="putBackModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 w-[90%] max-w-md">
+                <h2 class="text-xl font-bold mb-4">Choose Action</h2>
+                <div class="grid gap-3">
+                    <button id="putBackBtn" class="w-full px-4 py-2 border rounded-lg hover:bg-gray-50">Put Back</button>
+                    <button id="deleteBtn" class="w-full px-4 py-2 border rounded-lg hover:bg-gray-50 text-red-500">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
