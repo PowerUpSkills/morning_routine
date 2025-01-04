@@ -84,15 +84,18 @@ function hidePutBackModal() {
 }
 
 // Add task to a specific section
+
+// Add task to a specific section
 function addTask(text, section) {
+    const emoji = getEmojiForTask(text);
     const newTask = {
-        id: Date.now().toString(),
-        text: text
+      id: Date.now().toString(),
+      text: emoji ? `${emoji} ${text}` : text
     };
     tasks[section].push(newTask);
     saveTasks();
     renderTasks();
-}
+  }
 
 // Remove task from a section
 function removeTask(taskId, section) {
@@ -130,6 +133,20 @@ function handleDrop(e, section) {
         draggedTask = null;
     }
 }
+
+
+// Function to get emoji for a task based on its description
+function getEmojiForTask(taskDescription) {
+  const words = taskDescription.toLowerCase().split(' ');
+  for (const [emoji, mapping] of Object.entries(emojiMappings)) {
+    if (words.some(word => mapping.keywords.includes(word))) {
+      return emoji;
+    }
+  }
+  return '';
+}
+
+
 
 // Render tasks for all sections
 function renderTasks() {
