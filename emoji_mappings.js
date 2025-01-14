@@ -173,8 +173,26 @@ const emojiMappings = {
       },
       "👕": {
         keywords: ["clothes", "shopping", "clothing", "fashion", "wear", "apparel", "shirt", "outfit", "dress", "wardrobe", "style", "garment", "store", "buy", "purchase", "retail", "attire", "accessories", "merchandise", "boutique"],
+      },
+      // Work and Office Categories
+      "📅": {
+        keywords: ["calendar", "schedule", "date", "appointment", "meeting", "event", "plan", "organize", "agenda", "task", "reminder", "time", "day", "month", "year", "planner", "diary", "timeline", "deadline", "booking"],
+      },
+      "📊": {
+        keywords: ["chart", "graph", "data", "statistics", "analysis", "report", "business", "finance", "presentation", "trend", "growth", "performance", "metric", "visualization", "summary", "dashboard", "insight", "comparison", "evaluation", "review"],
+      },
+      // Personal Care Categories
+      "🛁": {
+        keywords: ["bath", "clean", "relax", "hygiene", "wash", "soak", "tub", "water", "soap", "bubble", "shower", "refresh", "grooming", "self-care", "spa", "bathroom", "routine", "scrub", "rinse", "bathe"],
+      },
+      "💇‍♂️": {
+        keywords: ["haircut", "grooming", "barber", "salon", "style", "trim", "hair", "beauty", "care", "personal", "shave", "scissors", "comb", "mirror", "appointment", "treatment", "service", "head", "appearance", "maintenance"],
+      },
+      // Fitness and Health Categories
+      "🏋️‍♂️": {
+        keywords: ["exercise", "workout", "gym", "fitness", "weightlifting", "strength", "training", "health", "bodybuilding", "muscle", "routine", "sport", "physical", "activity", "lift", "dumbbell", "barbell", "cardio", "endurance", "wellness"],
+      },
+      "🥗": {
+        keywords: ["salad", "healthy", "food", "meal", "diet", "nutrition", "vegetables", "fresh", "eat", "greens", "organic", "dish", "cooking", "recipe", "lunch", "dinner", "snack", "bowl", "ingredients", "vitamins"],
       }
     };
-
-
-    
